@@ -8,6 +8,7 @@ import java.io.ObjectInput;
 import java.io.ObjectInputStream;
 import java.io.ObjectOutput;
 import java.io.ObjectOutputStream;
+import java.io.PrintWriter;
 import java.lang.reflect.InvocationTargetException;
 
 /**
@@ -33,6 +34,9 @@ public class App {
 	public static void main(String[] args)
 			throws CloneNotSupportedException, InstantiationException, IllegalAccessException, IllegalArgumentException,
 			InvocationTargetException, FileNotFoundException, IOException, ClassNotFoundException {
+		
+		PrintWriter pw = new PrintWriter("JSONExample.json");
+		
 		System.out.println("Hello World!");
 
 		LazySingleton instance1 = LazySingleton.getInstance();

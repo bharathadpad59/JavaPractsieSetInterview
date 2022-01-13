@@ -11,6 +11,9 @@ public class StreamClass {
 	static String paramName = "widget";
 
 	public static void main(String[] args) {
+		
+		"hello".contains("he");
+		
 		if (Stream.of("widget", "panel_selected_tab").noneMatch(s -> s.equalsIgnoreCase(paramName))) {
 			System.out.println("hello its not matched");
 		}
