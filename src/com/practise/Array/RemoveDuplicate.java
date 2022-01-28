@@ -13,7 +13,7 @@ public class RemoveDuplicate {
 
 	public static void main(String[] args) {
 		int arr[] = { 10, 20, 20, 30, 30, 40, 50, 50 };
-
+			Arrays.sort(arr);
 		int[] newArr = new int[arr.length];
 
 		int j = 0;
@@ -39,19 +39,22 @@ public class RemoveDuplicate {
 		
 		
 		
-//		int[] data = { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 };
+		int[] data = { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 };
 
-		// To boxed array
-//		Integer[] what = Arrays.stream(arr).boxed().toArray(Integer[]::new);
-//		Integer[] ever = IntStream.of(data).boxed().toArray(Integer[]::new);
-//		int[] intArray = Arrays.stream(what).mapToInt(Integer::intValue).toArray();
-//		System.out.println(Arrays.toString(intArray));
-//		// To boxed list
-//		List<Integer> you = Arrays.stream(data).boxed().collect(Collectors.toList());
-//		List<Integer> like = IntStream.of(data).boxed().collect(Collectors.toList());
-//
-//		System.out.println("what==" + Arrays.toString(what) + " ever==" + Arrays.toString(ever) + " you==" + you
-//				+ " like==" + like);
+		// To boxed array (primitive array to Wrapper class Array)
+		Integer[] what = Arrays.stream(arr).boxed().toArray(Integer[]::new);
+		Integer[] ever = IntStream.of(data).boxed().toArray(Integer[]::new);
+		
+		//(Wrapper class Array to primitive array)
+		int[] intArray = Arrays.stream(what).mapToInt(Integer::intValue).toArray();
+		System.out.println(Arrays.toString(intArray));
+		
+		// To boxed list
+		List<Integer> you = Arrays.stream(data).boxed().collect(Collectors.toList());
+		List<Integer> like = IntStream.of(data).boxed().collect(Collectors.toList());
+
+		System.out.println("what==" + Arrays.toString(what) + " ever==" + Arrays.toString(ever) + " you==" + you
+				+ " like==" + like);
 	}
 
 }

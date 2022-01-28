@@ -21,6 +21,7 @@ public class RightShiftByNTimes {
 		for (i = arr.length-1; i >0 ; i--) {
 			arr[i]=arr[i-1];
 		}
+		System.out.println(i);
 		arr[i]=temp;
 		System.out.println(Arrays.toString(arr));
 	}

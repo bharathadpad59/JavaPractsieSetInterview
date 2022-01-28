@@ -12,6 +12,8 @@ public static void main(String[] args) {
 	for (int i = 0; i < arr1.length; i++) {
 		if(map.containsKey(arr1[i])) {
 			map.put(arr1[i],map.get(arr1[i]) + 1);
+		}else {
+			map.put(arr1[i], 1);
 		}
 	}
 	
