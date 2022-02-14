@@ -25,7 +25,9 @@ import java.util.stream.Collectors;
 public class ToMap {
 	//map() is used for data transformation,
 	
-//It returns the stream, based on the stream it received after applying the Function(Functional Interface Impl)
+//It returns the stream, based on the stream it received after applying the Function(Functional Interface Impl), functional interface has apply() method which takes 
+//and argument and return an argument based on what we need
+// So Map job us return the stream of data back by doing some changes (such as adding "" to int ) or not doing any changes (get salary data from Employee object).
 	
 	// flatMap() is used for data transformation + flattering
 	
